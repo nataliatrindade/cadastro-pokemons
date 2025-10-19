@@ -1,0 +1,108 @@
+label#tipo-select {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff; 
+    font-weight: 500;
+    font-size: 14px;
+}
+
+label#tipo-select select {
+    align-self: center;
+    padding: 10px; 
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-size: 15px;
+    cursor: pointer;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+
+label#tipo-select select:hover {
+  border-color: #888;
+}
+
+
+.pokemon-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 15px;
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.descricao-input {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.descricao-input textarea {
+    align-self: center;
+    width: 80%;
+    height: 200px; 
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 10px;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.descricao-input textarea::placeholder {
+  color: #aaa;
+}
+
+
+.poder-pokemon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.poder-pokemon label {
+    font-weight: 600;
+}
+
+.poder-pokemon input{
+    align-self: center;
+    width: 100px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+}
+
+.nome-input {
+    align-self: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 40%;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nome-input input {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./PokemonList.css"
 
 const PokemonList = ({ atualizarLista }) => {
     const [pokemons, setPokemons] = useState([]);
@@ -13,18 +14,30 @@ const PokemonList = ({ atualizarLista }) => {
     }
 
       return (
-        <div>
-          <h2>Pokemóns cadastrados</h2>
-          <ul>
+      <div>
+        <h2>Pokémons cadastrados</h2>
+        <table className="pokemon-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>Poder</th>
+              <th>Descrição</th>
+            </tr>
+          </thead>
+          <tbody>
             {pokemons.map((pokemon, i) => (
-              <li key={i}>
-                  {pokemon.nome} - {pokemon.tipo} - {pokemon.poder}
-                  <br />
-                  {pokemon.descricao}
-              </li>
+              <tr key={i}>
+                <td>{pokemon.nome}</td>
+                <td>{pokemon.tipo}</td>
+                <td>{pokemon.poder}</td>
+                <td>{pokemon.descricao}</td>
+              </tr>
             ))}
-          </ul>
-        </div>
+          </tbody>
+        </table>
+      </div>
+
     )
 }
 

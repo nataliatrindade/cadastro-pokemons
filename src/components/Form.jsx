@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
+import "./Form.css"
 
 const Form = ({ onAddPokemon  }) => {
     const notificacaoSucesso = () => toast.success("Pokémon cadastrado!");
@@ -44,12 +45,13 @@ const Form = ({ onAddPokemon  }) => {
 
       return (
         <div>
-          <form onSubmit={handleSubmit}>
-            <div>
+          <form onSubmit={handleSubmit} class="pokemon-form">
+            <div className="nome-input">
               <label htmlFor="nome">Nome do Pokémon </label>
               <input
                 type="text"
                 name="nome"
+                id="nome"
                 placeholder="Pokémon"
                 onChange={(e) => { setNome(e.target.value) }
                     }
@@ -57,7 +59,7 @@ const Form = ({ onAddPokemon  }) => {
               />
             </div>
     
-            <label>
+            <label id="tipo-select">
               Tipo
               <select name="tipo" onChange={(e) => setTipo(e.target.value)} value={tipo}>
                 <option value="">Selecione um tipo</option>
@@ -82,23 +84,24 @@ const Form = ({ onAddPokemon  }) => {
               </select>
             </label>
     
-            <div>
-              <label htmlFor="descricao">Descrição </label>
-              <input
-                type="text"
+            <div className="descricao-input">
+              <label htmlFor="descricao">Descrição do pokemon</label>
+              <textarea
+                id="descricao"
                 name="descricao"
                 placeholder="Descrição"
-                onChange={(e) => { setDescricao(e.target.value) }
-                    }
+                onChange={(e) => setDescricao(e.target.value)}
                 value={descricao}
               />
             </div>
+
     
-            <div>
+            <div className="poder-pokemon">
               <label htmlFor="poder">Poder </label>
               <input
                 type="number"
                 name="poder"
+                id="poder"
                 placeholder="0-100"
                 max="100" min="0"
                 onChange={(e) => { setPoder(e.target.value) }
